@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'gothic';
+    src: url('gothic.ttf');
+}
+@font-face {
+    font-family: 'PTSANS';
+    src: url('PTSANS.ttf');
+}
+@font-face {
+    font-family: 'sevastopol';
+    src: url('sevastopol.ttf');
+}
+@font-face {
+    font-family: 'romic';
+    src: url('romic.ttf');
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(0deg, rgba(0,0,0,1) 79%, rgba(18,18,18,1) 94%);
+}
+.artemis{
+    animation: artemisAnim 2s linear infinite;
+    animation-direction: alternate;
+}
+
+.veracruzText{
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #993232, 0 0 4px #e05d5d, 0 0 5px #db5e5e, 0 0 6px #f14e4e, 0 0 7px #ff5454;
+    }
+    to {
+        text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #993232, 0 0 5px #e05d5d, 0 0 6px #db5e5e, 0 0 7px #f14e4e, 0 0 8px #ff5454;
+    }
+}
+
+@keyframes artemisAnim {
+	from{
+        color:white;
+    }to{
+        color:blue;
+    }
+}
+
+
+.veracruz{
+    background-image: url("https://static.wikia.nocookie.net/liberproeliis/images/9/9c/Corpo-Seco.jpg/revision/latest?cb=20170327220538&path-prefix=pt-br");
+    background-position: center;
+    width: 320px;
+    height: 100px;
+    display:flex;
+    align-items:center;
+    align-content: center;
+    text-align:center;
+    opacity: 0.1;
+}
+a{
+    color:rgb(255, 255, 255);
+}
+a:active{
+    color: rgb(255, 255, 255);
+
+}
+#Vera{
+    opacity: 1 !important;
+}
+.display_left{
+    font-size: 70;
+    left:150px;
+    position:absolute;
+    font-family: 'PTSANS';
+    align-items:center;
+    align-content: center;
+    text-align:center;
+    color: rgb(255, 255, 255);
+}
+
+.display_right{
+    font-size: 70;
+    right:150px;
+    position:absolute;
+    font-family: 'PTSANS';
+    align-items:center;
+    align-content: center;
+    text-align:center;
+    color: rgb(255, 255, 255);
+}
+
+.display{
+    font-size: 70;
+    font-family: 'PTSANS';
+    align-items:center;
+    align-content: center;
+    text-align:center;
+    color: rgb(255, 255, 255);
+}
+
+.block {
+	position: relative;
+	margin: 10px auto 0;
+	width: 350;
+	height: 400;
+	background: linear-gradient(0deg, #000, #272727);
+}
+
+.block > img{
+    width: 350;
+    height: 400;
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #ffffff, #000000, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
